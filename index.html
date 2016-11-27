@@ -35,7 +35,7 @@
 					<h1><b>DEVOPS</b></h1>
 				    <h2>Uniendo desarrollo y operaciones</h2>
 				    <a href="http://www.seven4n.com">
-				    	<img data-src="./images/S4N.png" >
+				    	<img data-src="./images/S4N.png">
 				    </a>
 				    <p>
 			            <small>Author:
@@ -48,10 +48,36 @@
 			        <section>
 			            <h2>Agenda</h2>
 			            <ul>
+							<li>Lenguaje Ubicuo</li>
 			                <li>¿Qué es DevOps?</li>
-			                <li>Mi camino como DevOps</li>
+			                <li>Camino hacia una Organización de Alto Rendimiento</li>
 			                <li>Bibliografía</li>
 			            </ul>
+			        </section>
+
+		        </section>
+
+		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
+
+			        <section>
+			            <h2>Lenguaje Ubicuo</h2>
+			        </section>
+
+			        <section>
+			            <h3>¿Continuous qué?</h3>
+			            <blockquote>
+				            <ul>
+				            	<li class="fragment"><b>Integración (Integration)</b>
+				            		<ul><li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">práctica de mezclar todos los avances de cada desarrollador en <b>UN</b> branch central varias veces al día</a></li></ul>
+				            	</li>
+				            	<li class="fragment"><b>Entrega (Delivery)</b>
+				            		<ul><li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">el equipo se asegura que cada cambio pueda desplegarse en producción, pero podría decidir no realizarlo por razones de negocio</a></li></ul>
+				            	</li>
+				            	<li class="fragment"><b>Despliegue (Deployment)</b>
+				            		<ul><li class="fragment">cada cambio se despliega de forma automática en producción</li></ul>
+				            	</li>
+				            </ul>
+				        </blockquote>
 			        </section>
 
 		        </section>
@@ -62,12 +88,199 @@
 			            <h2>¿Qué es DevOps?</h2>
 			        </section>
 
+					<section>
+			            <h3>Muro de la Confusión</h3>
+			            <img src="images/muro_confusion1.png" />
+			        </section>
+
+					<section>
+			            <h3>Muro de la Confusión</h3>
+			            <img src="images/confusion_wall.png" />
+			        </section>
+
+					<section>
+			            <h3>Muro de la Confusión</h3>
+			            <img src="images/problemas.png" />
+			        </section>
+
+			        <section>
+			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
+			            <p>
+			            <ul>
+				            <li>Negocios:
+					            <ul>
+					            	<li>Vancouver Stock Exchange: errores de redondeo usando Floats</li>
+					            	<li><a href="https://en.wikipedia.org/wiki/Knight_Capital_Group">Knight Capital Group</a>: perdieron $440 million en 45 minutos</li>
+					            </ul>
+				        	</li>
+				            <li>Videojuegos:
+					            <ul>
+					            	<li><a href="http://www.pcworld.com/article/2871653/scary-steam-for-linux-bug-erases-all-the-personal-files-on-your-pc.html">Steam</a>: actualización borraba las carpetas personales de los usuarios</li>
+					            </ul>
+<pre><code class="hljs">
+STEAMROOT="$(cd "${0%/*}" && echo $PWD)"
+rm -rf "$STEAMROOT/"*
+</code></pre>
+							</li>
+						</ul>
+						</p>
+			        </section>
+
+			        <section>
+			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
+			            <ul>
+			            <li>
+			        	    Criptografía:
+				            <ul>
+				            	<li>Apple Computer, Inc: (Unreachable Code) aceptaba cualquier certificado digital</li>
+				            </ul>
+			        	</li>
+			            <li>
+				            Seguimiento de Fechas:
+				            <ul>
+				            	<li>Bank of Queensland: incorrecta converción de un número hexadecimal</li>
+				            </ul>
+			        	</li>
+			        	<ul>
+			        </section>
+
+			        <section>
+			            <h3>DevOps: Definiciones</h3>
+			            <img src="images/que_no_es.png" />
+			        </section>
+
+			        <section>
+			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
+			        	<blockquote>
+							<ul>
+								<b>Cultural Phenomena</b>
+								<b>App Developers must be aware of Operational Needs</b>
+								<b>Operations people must smooth deployment</b>
+								<b>Collaboration</b>
+							</ul>
+						</blockquote>
+					</section>
+
+			        <section>
+			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=eRMhP2L19Gw&feature=youtu.be&t=10m16s">Yuji Kiriki</a></h3>
+			        	<blockquote>
+							<b>Equipo de Desarrollo</b> empieza a:
+							<ul>
+								<b>operar</b>
+								<b>monitorear</b>
+								<b>responder</b>
+							</ul>
+							por la aplicación
+						</blockquote>
+					</section>
+
+			        <section>
+			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=eRMhP2L19Gw&feature=youtu.be&t=10m51s">Yuji Kiriki</a></h3>
+						<blockquote>
+							<b>Funciones típicas:</b>
+							<ul>
+								<li>Infraestructura Inmutable</li>
+								<li>Aprovisionamiento Automático</li>
+								<li>Desarrollo empieza a desplegar</li>
+								<li>Despliegue Continuo</li>
+								<li>Monitoreo y Seguimiento</li>
+								<li>Pruebas de carga y Capacidad</li>
+							</ul>
+						</blockquote>
+			        </section>
+
+   			        <section>
+			            <h3>DevOps: Definición</h3>
+			            <blockquote>
+			            	<b>DevOps</b> es una <b>Cultura de Confianza y Colaboración</b> en la cual la gente usa las <b>Herramientas</b> adecuadas para la <b>automatización</b> y así poder garantizar una <b>Entrega Continua</b>.
+			            </blockquote>
+			        </section>
+
+   			        <section>
+			            <h3>Los DevOps deben asegurar un Flujo de Despliegue caracterizado por:</h3>
+			            <ul>
+			            	<li>Compilación Automatizada</li>
+			            	<li>Pruebas Automatizadas</li>
+			            	<li>Despliegue Automatizado</li>
+			            </ul>
+			            <img width="60%" height="60%" src="images/flow.png" />
+			        </section>
+
+			        <section>
+			        	<h3>El equipo debe</h3>
+			        	<img src="images/nuevas_historias_de_usuario.png" />
+			        </section>
+
+			        <section>
+			        	<h3>Responsabilidades</h3>
+			        	<img src="images/herramientas.png" />
+			        </section>
+
+			        <section>
+			        	<h3>Herramientas: Aprovisionamiento de Máquinas</h3>
+			        	<ul>
+		        			<li>Terraform</li>
+		        			<li>Docker Machine</li>
+		        			<li>aws-cli / boto</li>
+		        			<li>Otto / vagrant</li>
+				        </ul>
+			        </section>
+
+			        <section>
+			        	<h3>Herramientas: Aprovisionamiento de Software</h3>
+			        	<ul>
+		        			<li>Jenkins</li>
+		        			<li>RunDeck</li>
+		        			<li>Capistrano</li>
+		        			<li>Ansible</li>
+		        			<li>Puppet</li>
+		        			<li>Chef</li>
+		        			<li>BuildMaster</li>
+		        			<li>Mesos / Kubernetes</li>
+				        </ul>
+			        </section>
+
+			        <section>
+			        	<h3>Herramientas: Administración de la configuración</h3>
+			        	<ul>
+				        	<li>Puppet's Hiera</li>
+				        	<li>Consul</li>
+				        </ul>
+			        </section>
+
+			        <section>
+			        	<h3>Herramientas: Monitoreo / Reportes / Alertas (1)</h3>
+			        	<ul>
+			        		<li>AWS Cloudwatch</li>
+			        		<li>Nagios</li>
+			        		<li>Icinga</li>
+			        		<li>Zabbix</li>
+			        		<li>Monit</li>
+			        		<li>ELK: Logstash, ElasticSearch, Kibana</li>
+			        		<li>Collectd/Collectl</li>
+			        		<li>UpGuard</li>
+			        		<li>Splunk</li>
+			        		<li>Vistara</li>
+			        		<li>SolarWinds</li>
+				        </ul>
+			        </section>
+
+			        <section>
+			        	<h3>Herramientas: Monitoreo / Reportes / Alertas (2)</h3>
+			        	<ul>
+			        		<li>Nimsoft</li>
+			        		<li>New Relic</li>
+			        		<li>Graphite / Grafana</li>
+			        		<li>Dynatrace</li>
+				        </ul>
+			        </section>
+
 		        </section>
 
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 
 			        <section>
-			            <h2>Mi camino como DevOps</h2>
+			            <h2>Nuestro camino como DevOps</h2>
 			        </section>
 
 		        </section>
@@ -76,6 +289,10 @@
 
 			        <section>
 			            <h2>Bibliografía</h2>
+			            <ul>
+			            	<li>Gene Kim, Patrick Debois, John Willis, Jez Humble, John Allspaw: <u><i>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</i></u>(2016)</li>
+			            	<li>Jez Humble, David Farley: <u><i>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation </i></u>(2016)</li>
+			            </ul>
 			        </section>
 
 		        </section>
