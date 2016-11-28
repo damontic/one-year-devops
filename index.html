@@ -48,7 +48,7 @@
 			        <section>
 			            <h2>Agenda</h2>
 			            <ul>
-							<li>¿Continuous qué?</li>
+							<li>Algunas Preguntas</li>
 							<li>Despliegues en Producción</li>
 			                <li>¿Qué es DevOps?</li>
 			                <li>Camino hacia una Organización de Alto Rendimiento</li>
@@ -62,7 +62,73 @@
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 
 			        <section>
-			            <h2>¿Continuous qué?</h2>
+			            <h2>Algunas Preguntas</h2>
+			        </section>
+
+			        <section>
+			            <h3>¿Qué rol diseña?</h3>
+			            <ul>
+			            <li class="fragment">Los diseñadores</li>
+			            <li class="fragment">Levante la mano si usted no es diseñador y ha hecho:
+			            	<ul>
+			            	<li class="fragment">algún código de diseño</li>
+			            	<li class="fragment">una modificación una imagen (png,jpg,gif)</li>
+			            	</ul>
+			            </li>
+			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>¿Qué rol realiza pruebas funcionales?</h3>
+			            <ul>
+			            <li class="fragment">Los testers</li>
+			            <li class="fragment">Levante la mano si usted no es tester y ha hecho:
+			            	<ul>
+			            	<li class="fragment">pruebas unitarias</li>
+			            	<li class="fragment">pruebas funcionales</li>
+			            	</ul>
+			            </li>
+			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>¿Qué rol realiza pruebas no funcionales?</h3>
+			            <ul>
+			            <li class="fragment">System Performance Engineers</li>
+			            <li class="fragment">Levante la mano si usted ha hecho:
+			            	<ul>
+			            	<li class="fragment">pruebas no funcionales</li>
+			            	</ul>
+			            </li>
+			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>¿Qué rol realiza despliegues?</h3>
+			            <ul>
+			            <li class="fragment">Operations</li>
+			            <li class="fragment">Levante la mano si usted ha hecho:
+			            	<ul>
+			            	<li class="fragment">despliegues</li>
+			            	</ul>
+			            </li>
+			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>¿Qué rol se asegura de la estabilidad de un sitio?</h3>
+			            <ul>
+			            <li class="fragment">Systems Reliability Engineer</li>
+			            <li class="fragment">Levante la mano si usted ha hecho:
+			            	<ul>
+			            	<li class="fragment">recuperaciones de caidas de ambientes</li>
+			            	</ul>
+			            </li>
+			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>¿Continuous qué?</h3>
 			        </section>
 
 			        <section>
@@ -100,14 +166,6 @@
 
 			        <section>
 			            <h2>Despliegues en Producción</h2>
-			        </section>
-
-			        <section>
-			            <h3>Organizaciones de Alto Rendimiento</h3>
-			            <ul>
-			            	<li></li>
-			            </ul>
-
 			        </section>
 
 			        <section>
@@ -167,6 +225,26 @@ rm -rf "$STEAMROOT/"*
 					            </ul>
 				        	</li>
 			        	</ul>
+			        </section>
+
+			        <section>
+			            <h3>Organizaciones de Alto Rendimiento</h3>
+			            <ul>
+			            	<li class="fragment">Amazon, Google, Etsy, Facebook y Netflix: diariamente depsliegan más de 100 veces en Producción</li>
+			            	<li class="fragment">Algunas organizaciones hacen que las personas recién contratadas desplieguen en Producción</li>
+			            	<li class="fragment">La mayoría de Organizaciones lo piensan dos veces antes de desplegar más de dos veces al año</li>
+			            </ul>
+			        </section>
+
+			        <section>
+			            <h3>Organizaciones de Alto Rendimiento</h3>
+			            <p>Desde el 2011 hasta el 2015 las organizaciones que usan DevOps</p>
+			            <ul>
+			            	<li class="fragment">despliegan 30 veces más frecuentemente</li>
+			            	<li class="fragment">tuvieron una mejora de 200 veces en su Order Lead Time</li>
+			            	<li class="fragment">tuvieron 60 veces menos fallas</li>
+			            	<li class="fragment">su MTR (Mean Time to Recover) fue 166 veces más rápido</li>
+			            </ul>
 			        </section>
 
 					<section>
@@ -242,11 +320,13 @@ rm -rf "$STEAMROOT/"*
 			            <h3>DevOps: Definición</h3>
 			            <ul>
 			            	<li class="fragment">DevOps no es un rol</li>
+			            	<li class="fragment">DevOps no son los desarrolladores administrando Producción</li>
 			            	<li class="fragment">Los roles son: Developers y Operations</li>
 			            	<li class="fragment">Operations deben saber:</li>
 			            	<ul>
 			            		<li class="fragment">programar</li>
-			            		<li class="fragment">automatizar procedimientos</li>
+			            		<li class="fragment">automatizar procedimientos de operaciones</li>
+			            		<li class="fragment">tener conocimiento de la aplicación</li>
 			            	</ul>
 			            	<li class="fragment"><a href="https://landing.google.com/sre/interview/ben-treynor.html">Site Reliability Engineers</a>
 			            		<ul>
@@ -340,6 +420,8 @@ rm -rf "$STEAMROOT/"*
 			            	<li class="fragment">Siempre pensar en Rollback, que también debe estar Automatizado</li>
 			            	<li class="fragment">Integración contínua</li>
 			            	<li class="fragment">Monitoreo de aplicaciones</li>
+			            	<li class="fragment">Optimizar la arquitectura de las aplicaciones, minimizando la cantidad de entidades que los componen (KISS) pero cumpliendo con CAP</li>
+			            	<li class="fragment">Mejorar pruebas de carga y estrés</li>
 			            </ul>
 			        </section>
 
@@ -420,6 +502,8 @@ rm -rf "$STEAMROOT/"*
 			            <ul>
 			            	<li>Gene Kim, Patrick Debois, John Willis, Jez Humble, John Allspaw: <u><i>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</i></u>(2016)</li>
 			            	<li>Jez Humble, David Farley: <u><i>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation </i></u>(2010)</li>
+			            	<li><a href="https://landing.google.com/sre/interview/ben-treynor.html">Site Reliability Engineering</a></li>
+			            	<li><a href="https://www.youtube.com/watch?v=yXI7r0_J29M">Site Reliability Engineering Video</a></li>
 			            </ul>
 			        </section>
 
