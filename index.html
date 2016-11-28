@@ -103,7 +103,15 @@
 			        </section>
 
 			        <section>
-			            <h2>¡Vamos a desplegar en Producción!</h2>
+			            <h3>Organizaciones de Alto Rendimiento</h3>
+			            <ul>
+			            	<li></li>
+			            </ul>
+
+			        </section>
+
+			        <section>
+			            <h3>¡Vamos a desplegar en Producción!</h3>
 			            <ul>
 			            	<li class="fragment">¿Quien ha hecho un despliegue en Producción?</li>
 			            	<li class="fragment">¿Cómo se elige quien va a desplegar?</li>
@@ -231,7 +239,25 @@ rm -rf "$STEAMROOT/"*
 			        </section>
 
    			        <section>
-			            <h3>Los DevOps deben asegurar un Flujo de Despliegue caracterizado por:</h3>
+			            <h3>DevOps: Definición</h3>
+			            <ul>
+			            	<li class="fragment">DevOps no es un rol</li>
+			            	<li class="fragment">Los roles son: Developers y Operations</li>
+			            	<li class="fragment">Operations deben saber:</li>
+			            	<ul>
+			            		<li class="fragment">programar</li>
+			            		<li class="fragment">automatizar procedimientos</li>
+			            	</ul>
+			            	<li class="fragment"><a href="https://landing.google.com/sre/interview/ben-treynor.html">Site Reliability Engineers</a>
+			            		<ul>
+			            			<li class="fragment"><blockquote>Fundamentally, it’s what happens when you ask a software engineer to design an operations function.</blockquote></li>
+			            		</ul>
+			            	</li>
+			            </ul>
+			        </section>
+
+   			        <section>
+			            <h3>La Cultura DevOps debe asegurar un Flujo de Despliegue caracterizado por:</h3>
 			            <ul>
 			            	<li>Compilación Automatizada</li>
 			            	<li>Pruebas Automatizadas</li>
@@ -272,8 +298,51 @@ rm -rf "$STEAMROOT/"*
 
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 			        <section>
-			            <h2>Nuestro camino como DevOps</h2>
+			            <h2>Camino hacia una Organización de Alto Rendimiento</h2>
 			        </section>
+
+			        <section>
+			            <h3>Identificando el problema</h3>
+			            <ul>
+			            	<li><a href="http://s4n.co/html/S4Ndecoded/operacion.html">Operación de software es una nueva línea de negocio que afianzará las relaciones con el cliente</a>: Jean Philip Zucchet</li>
+			            	<ul><li class="fragment">la <b>confianza que el cliente deposita en nosotros</b> no dependerá solamente de los equipos de <b>desarrollo</b> y <b>operación</b> por separado, sino de su capacidad para trabajar de manera <b>conjunta</b>.</li></ul>
+			            </ul>
+			        </section>
+
+			        <section>
+			            <h3>Propuesta / Objetivo</h3>
+			            <p>Cada equipo debe contar con la capacidad y el conocimiento para:</p>
+			            <ul>
+			            	<li class="fragment">Desplegar, Monitorear y Operar los diferentes ambientes</li>
+			            	<li class="fragment">Aprender de forma Contínua</li>
+			            	<li class="fragment">Automatizar los procesos de Compilación, Pruebas y Despliegue</li>
+			            </ul>
+			        </section>
+
+			        <section>
+			            <h3>Proyectos con prácticas de DevOps</h3>
+			            <ul>
+			            	<li class="fragment">ACH</li>
+			            	<li class="fragment"><a href="http://s4n.co/html/S4NDecoded-julio/articulo-01.html">Copa</a></li>
+			            	<li class="fragment">¿Otros?</li>
+			            	<li class="fragment">¡Sí! ¡TODOS!</li>
+			            </ul>
+			        </section>
+
+			        <section>
+			            <h3>Trabajo por Hacer</h3>
+			            <ul>
+			            	<li class="fragment">DevOps en cada equipo</li>
+			            	<li class="fragment">Mejorar Capacidades Técnicas</li>
+			            	<li class="fragment">Comparar herramientas rápidamente</li>
+			            	<li class="fragment">Mejorar la selección de la herramienta ideal para el trabajo</li>
+			            	<li class="fragment">Automatizar absolutamente <b>TODO</b></li>
+			            	<li class="fragment">Siempre pensar en Rollback, que también debe estar Automatizado</li>
+			            	<li class="fragment">Integración contínua</li>
+			            	<li class="fragment">Monitoreo de aplicaciones</li>
+			            </ul>
+			        </section>
+
 		        </section>
 
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
@@ -294,6 +363,8 @@ rm -rf "$STEAMROOT/"*
 			        <section>
 			        	<h3>Herramientas: Aprovisionamiento de Software</h3>
 			        	<ul>
+							<li>Rkt</li>
+							<li>Docker</li>
 		        			<li>Jenkins</li>
 		        			<li>RunDeck</li>
 		        			<li>Capistrano</li>
