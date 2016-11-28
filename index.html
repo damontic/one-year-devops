@@ -48,9 +48,11 @@
 			        <section>
 			            <h2>Agenda</h2>
 			            <ul>
-							<li>Lenguaje Ubicuo</li>
+							<li>¿Continuous qué?</li>
+							<li>Despliegues en Producción</li>
 			                <li>¿Qué es DevOps?</li>
 			                <li>Camino hacia una Organización de Alto Rendimiento</li>
+			                <li>Herramientas de DevOps</li>
 			                <li>Bibliografía</li>
 			            </ul>
 			        </section>
@@ -60,24 +62,36 @@
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 
 			        <section>
-			            <h2>Lenguaje Ubicuo</h2>
+			            <h2>¿Continuous qué?</h2>
 			        </section>
 
 			        <section>
-			            <h3>¿Continuous qué?</h3>
+			            <h3>Continuous Integration</h3>
 			            <blockquote>
 				            <ul>
-				            	<li class="fragment"><b>Integración (Integration)</b>
-				            		<ul><li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">práctica de mezclar todos los avances de cada desarrollador en <b>UN</b> branch central varias veces al día</a></li></ul>
-				            	</li>
-				            	<li class="fragment"><b>Entrega (Delivery)</b>
-				            		<ul><li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">el equipo se asegura que cada cambio pueda desplegarse en producción, pero podría decidir no realizarlo por razones de negocio</a></li></ul>
-				            	</li>
-				            	<li class="fragment"><b>Despliegue (Deployment)</b>
-				            		<ul><li class="fragment">cada cambio se despliega de forma automática en producción</li></ul>
-				            	</li>
+				            	<li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">práctica de mezclar todos los avances de cada desarrollador en <b>UN</b> branch central varias veces al día</a></li>
+				            	<li class="fragment">garantizando la estabilidad del branch resultante</li>
 				            </ul>
 				        </blockquote>
+			        </section>
+
+			        <section>
+			            <h3>Continuous Delivery</h3>
+			            <blockquote>
+				            <ul><li class="fragment"><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=9m28s">el equipo se asegura que cada cambio PUEDA desplegarse en producción, pero podría decidir no realizarlo por razones de negocio</a></li></ul>
+				        </blockquote>
+			        </section>
+
+			        <section>
+			            <h3>Continuous Deployment</h3>
+			            <blockquote>
+				            <ul><li class="fragment">cada cambio se despliega de forma automática en producción</li></ul>
+				        </blockquote>
+			        </section>
+
+			        <section>
+			            <h3>Continuous ...</h3>
+			            <img src="images/continuous.png" />
 			        </section>
 
 		        </section>
@@ -85,35 +99,36 @@
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 
 			        <section>
-			            <h2>¿Qué es DevOps?</h2>
+			            <h2>Despliegues en Producción</h2>
 			        </section>
 
-					<section>
-			            <h3>Muro de la Confusión</h3>
-			            <img src="images/muro_confusion1.png" />
+			        <section>
+			            <h2>¡Vamos a desplegar en Producción!</h2>
+			            <ul>
+			            	<li class="fragment">¿Quien ha hecho un despliegue en Producción?</li>
+			            	<li class="fragment">¿Cómo se elige quien va a desplegar?</li>
+			            	<li class="fragment">¿Saldrá bien el despliegue?</li>
+			            	<li class="fragment">Ahora que acabamos el despliegue, ¿si estará funcionando esa aplicación?</li>
+			            	<li class="fragment">¡Uyyy ayer hicimos el despliegue y un error horrible se fue a Producción! Bueno será en el próximo despliegue...</li>
+			        	</ul>
 			        </section>
 
-					<section>
-			            <h3>Muro de la Confusión</h3>
-			            <img src="images/confusion_wall.png" />
-			        </section>
-
-					<section>
-			            <h3>Muro de la Confusión</h3>
-			            <img src="images/problemas.png" />
-			        </section>
+			        <section>
+			        	<h3>Errare humanum est</h3>
+			        	<img src="images/problemas.png" />
+		        	</section>
 
 			        <section>
 			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
 			            <p>
 			            <ul>
-				            <li>Negocios:
+				            <li class="fragments">Negocios:
 					            <ul>
 					            	<li>Vancouver Stock Exchange: errores de redondeo usando Floats</li>
 					            	<li><a href="https://en.wikipedia.org/wiki/Knight_Capital_Group">Knight Capital Group</a>: perdieron $440 million en 45 minutos</li>
 					            </ul>
 				        	</li>
-				            <li>Videojuegos:
+				            <li class="fragments">Videojuegos:
 					            <ul>
 					            	<li><a href="http://www.pcworld.com/article/2871653/scary-steam-for-linux-bug-erases-all-the-personal-files-on-your-pc.html">Steam</a>: actualización borraba las carpetas personales de los usuarios</li>
 					            </ul>
@@ -129,19 +144,39 @@ rm -rf "$STEAMROOT/"*
 			        <section>
 			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
 			            <ul>
-			            <li>
-			        	    Criptografía:
-				            <ul>
-				            	<li>Apple Computer, Inc: (Unreachable Code) aceptaba cualquier certificado digital</li>
-				            </ul>
-			        	</li>
-			            <li>
-				            Seguimiento de Fechas:
-				            <ul>
-				            	<li>Bank of Queensland: incorrecta converción de un número hexadecimal</li>
-				            </ul>
-			        	</li>
+				            <li>
+				        	    Criptografía:
+					            <ul>
+					            	<li>Apple Computer, Inc: (Unreachable Code) aceptaba cualquier certificado digital</li>
+					            </ul>
+				        	</li>
+			        	</ul>
 			        	<ul>
+				            <li>
+					            Seguimiento de Fechas:
+					            <ul>
+					            	<li>Bank of Queensland: incorrecta converción de un número hexadecimal</li>
+					            </ul>
+				        	</li>
+			        	</ul>
+			        </section>
+
+					<section>
+			            <h3>Muro de la Confusión</h3>
+			            <img src="images/confusion_wall.png" />
+			        </section>
+
+					<section>
+			            <h3>Muro de la Confusión</h3>
+			            <img src="images/muro_confusion1.png" />
+			        </section>
+
+	        	</section>
+
+		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
+
+			        <section>
+			            <h2>¿Qué es DevOps?</h2>
 			        </section>
 
 			        <section>
@@ -153,10 +188,10 @@ rm -rf "$STEAMROOT/"*
 			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
 			        	<blockquote>
 							<ul>
-								<b>Cultural Phenomena</b>
-								<b>App Developers must be aware of Operational Needs</b>
-								<b>Operations people must smooth deployment</b>
-								<b>Collaboration</b>
+								<li class="fragments"><b>Fenómeno Cultural</b></li>
+								<li class="fragments"><b>Los Desarrolladores de Aplicaciones deben ser conscientes de las necesidades de Operación</b></li>
+								<li class="fragments"><b>Las personas de Operación deben facilitar el despliegue</b></li>
+								<li class="fragments"><b>Colaboración</b></li>
 							</ul>
 						</blockquote>
 					</section>
@@ -166,11 +201,10 @@ rm -rf "$STEAMROOT/"*
 			        	<blockquote>
 							<b>Equipo de Desarrollo</b> empieza a:
 							<ul>
-								<b>operar</b>
-								<b>monitorear</b>
-								<b>responder</b>
+								<li class="fragments"><b>operar la aplicación</b></li>
+								<li class="fragments"><b>monitorear la aplicación</b></li>
+								<li class="fragments"><b>responder por la aplicación</b></li>
 							</ul>
-							por la aplicación
 						</blockquote>
 					</section>
 
@@ -207,6 +241,24 @@ rm -rf "$STEAMROOT/"*
 			        </section>
 
 			        <section>
+			        	<h3>Para qué Entrega Contínua?</h3>
+			        	<ul>
+			        		<li>Reducir los Riesgos</li>
+			        		<li>Mostrar los Avances</li>
+			        		<li>Obtener RetroAlimentación</li>
+				        </ul>
+			        </section>
+
+			        <section>
+			        	<h3>Para qué Entrega Contínua?: Reducir los riesgos</h3>
+			        	<ul>
+			        		<li><blockquote>Small changes, lower risks. Martin Fowler.</blockquote></li>
+			        		<li>Versionamiento de Infraestructura y Configuración</li>
+			        		<li>Múltiples pequeños aportes a la rama principal disminuyen el riesgo de error, pues entre más pequeño el cambio, más fácil de corregir.</li>
+				        </ul>
+			        </section>
+
+			        <section>
 			        	<h3>El equipo debe</h3>
 			        	<img src="images/nuevas_historias_de_usuario.png" />
 			        </section>
@@ -216,7 +268,20 @@ rm -rf "$STEAMROOT/"*
 			        	<img src="images/herramientas.png" />
 			        </section>
 
+		        </section>
+
+		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 			        <section>
+			            <h2>Nuestro camino como DevOps</h2>
+			        </section>
+		        </section>
+
+		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
+			        <section>
+			            <h2>Herramientas de DevOps</h2>
+			        </section>
+
+					<section>
 			        	<h3>Herramientas: Aprovisionamiento de Máquinas</h3>
 			        	<ul>
 		        			<li>Terraform</li>
@@ -280,18 +345,10 @@ rm -rf "$STEAMROOT/"*
 		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
 
 			        <section>
-			            <h2>Nuestro camino como DevOps</h2>
-			        </section>
-
-		        </section>
-
-		        <section data-background="./images/S4N.png" data-state="img-top-right" data-background-size="250px">
-
-			        <section>
 			            <h2>Bibliografía</h2>
 			            <ul>
 			            	<li>Gene Kim, Patrick Debois, John Willis, Jez Humble, John Allspaw: <u><i>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</i></u>(2016)</li>
-			            	<li>Jez Humble, David Farley: <u><i>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation </i></u>(2016)</li>
+			            	<li>Jez Humble, David Farley: <u><i>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation </i></u>(2010)</li>
 			            </ul>
 			        </section>
 
