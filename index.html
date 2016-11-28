@@ -48,12 +48,12 @@
 			        <section>
 			            <h2>Agenda</h2>
 			            <ul>
-							<li>Algunas Preguntas</li>
-							<li>Despliegues en Producción</li>
-			                <li>¿Qué es DevOps?</li>
-			                <li>Camino hacia una Organización de Alto Rendimiento</li>
-			                <li>Herramientas de DevOps</li>
-			                <li>Bibliografía</li>
+							<li class="fragment">Algunas Preguntas</li>
+							<li class="fragment">Despliegues en Producción</li>
+			                <li class="fragment">¿Qué es DevOps?</li>
+			                <li class="fragment">Camino hacia una Organización de Alto Rendimiento</li>
+			                <li class="fragment">Herramientas de DevOps</li>
+			                <li class="fragment">Bibliografía</li>
 			            </ul>
 			        </section>
 
@@ -188,15 +188,15 @@
 			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
 			            <p>
 			            <ul>
-				            <li class="fragments">Negocios:
+				            <li class="fragment"><b>Negocios:</b>
 					            <ul>
-					            	<li>Vancouver Stock Exchange: errores de redondeo usando Floats</li>
-					            	<li><a href="https://en.wikipedia.org/wiki/Knight_Capital_Group">Knight Capital Group</a>: perdieron $440 million en 45 minutos</li>
+					            	<li class="fragment"><b>Vancouver Stock Exchange</b>: errores de redondeo usando Floats</li>
+					            	<li class="fragment"><a href="https://en.wikipedia.org/wiki/Knight_Capital_Group"><b>Knight Capital Group</b></a>: perdieron $440 million en 45 minutos</li>
 					            </ul>
 				        	</li>
-				            <li class="fragments">Videojuegos:
+				            <li class="fragment"><b>Videojuegos:</b>
 					            <ul>
-					            	<li><a href="http://www.pcworld.com/article/2871653/scary-steam-for-linux-bug-erases-all-the-personal-files-on-your-pc.html">Steam</a>: actualización borraba las carpetas personales de los usuarios</li>
+					            	<li><a href="http://www.pcworld.com/article/2871653/scary-steam-for-linux-bug-erases-all-the-personal-files-on-your-pc.html"><b>Steam</b></a>: actualización borraba las carpetas personales de los usuarios</li>
 					            </ul>
 <pre><code class="hljs">
 STEAMROOT="$(cd "${0%/*}" && echo $PWD)"
@@ -210,18 +210,18 @@ rm -rf "$STEAMROOT/"*
 			        <section>
 			            <h3>Despliegues Famosos (por las consecuencias negativas)</h3>
 			            <ul>
-				            <li>
-				        	    Criptografía:
+				            <li class="fragment">
+				        	    <b>Criptografía:</b>
 					            <ul>
-					            	<li>Apple Computer, Inc: (Unreachable Code) aceptaba cualquier certificado digital</li>
+					            	<li><b>Apple Computer, Inc:</b> (Unreachable Code) aceptaba cualquier certificado digital</li>
 					            </ul>
 				        	</li>
 			        	</ul>
 			        	<ul>
-				            <li>
-					            Seguimiento de Fechas:
+				            <li class="fragment">
+					            <b>Seguimiento de Fechas:</b>
 					            <ul>
-					            	<li>Bank of Queensland: incorrecta converción de un número hexadecimal</li>
+					            	<li><b>Bank of Queensland:</b> incorrecta converción de un número hexadecimal</li>
 					            </ul>
 				        	</li>
 			        	</ul>
@@ -230,7 +230,7 @@ rm -rf "$STEAMROOT/"*
 			        <section>
 			            <h3>Organizaciones de Alto Rendimiento</h3>
 			            <ul>
-			            	<li class="fragment">Amazon, Google, Etsy, Facebook y Netflix: diariamente depsliegan más de 100 veces en Producción</li>
+			            	<li class="fragment">Amazon, Google, Etsy, Facebook y Netflix: diariamente despliegan más de 100 veces en Producción</li>
 			            	<li class="fragment">Algunas organizaciones hacen que las personas recién contratadas desplieguen en Producción</li>
 			            	<li class="fragment">La mayoría de Organizaciones lo piensan dos veces antes de desplegar más de dos veces al año</li>
 			            </ul>
@@ -271,25 +271,13 @@ rm -rf "$STEAMROOT/"*
 			        </section>
 
 			        <section>
-			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
-			        	<blockquote>
-							<ul>
-								<li class="fragments"><b>Fenómeno Cultural</b></li>
-								<li class="fragments"><b>Los Desarrolladores de Aplicaciones deben ser conscientes de las necesidades de Operación</b></li>
-								<li class="fragments"><b>Las personas de Operación deben facilitar el despliegue</b></li>
-								<li class="fragments"><b>Colaboración</b></li>
-							</ul>
-						</blockquote>
-					</section>
-
-			        <section>
 			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=eRMhP2L19Gw&feature=youtu.be&t=10m16s">Yuji Kiriki</a></h3>
 			        	<blockquote>
 							<b>Equipo de Desarrollo</b> empieza a:
 							<ul>
-								<li class="fragments"><b>operar la aplicación</b></li>
-								<li class="fragments"><b>monitorear la aplicación</b></li>
-								<li class="fragments"><b>responder por la aplicación</b></li>
+								<li class="fragment"><b>operar la aplicación</b></li>
+								<li class="fragment"><b>monitorear la aplicación</b></li>
+								<li class="fragment"><b>responder por la aplicación</b></li>
 							</ul>
 						</blockquote>
 					</section>
@@ -299,20 +287,38 @@ rm -rf "$STEAMROOT/"*
 						<blockquote>
 							<b>Funciones típicas:</b>
 							<ul>
-								<li>Infraestructura Inmutable</li>
-								<li>Aprovisionamiento Automático</li>
-								<li>Desarrollo empieza a desplegar</li>
-								<li>Despliegue Continuo</li>
-								<li>Monitoreo y Seguimiento</li>
-								<li>Pruebas de carga y Capacidad</li>
+								<li class="fragment">Infraestructura Inmutable</li>
+								<ul class="fragment"><li>Un servidor, una vez desplegado, nunca se modifica, solamente reemplazado con una instancia actualizada</li></ul>
+								<li class="fragment">Aprovisionamiento Automático</li>
+								<li class="fragment">Desarrollo empieza a desplegar</li>
+								<li class="fragment">Despliegue Continuo</li>
+								<li class="fragment">Monitoreo y Seguimiento</li>
+								<li class="fragment">Pruebas de Carga y Capacidad</li>
 							</ul>
 						</blockquote>
 			        </section>
 
+			        <section>
+			        	<h3>Explicación de <a href="https://www.youtube.com/watch?v=aoMfbgF2D_4&t=8m24s">Martin Fowler</a></h3>
+			        	<blockquote>
+							<ul>
+								<li class="fragment"><b>Fenómeno Cultural</b></li>
+								<li class="fragment"><b>Los Desarrolladores de Aplicaciones deben ser conscientes de las necesidades de Operación</b></li>
+								<li class="fragment"><b>Las personas de Operación deben facilitar el despliegue</b></li>
+								<li class="fragment"><b>Colaboración</b></li>
+							</ul>
+						</blockquote>
+					</section>
+
    			        <section>
 			            <h3>DevOps: Definición</h3>
 			            <blockquote>
-			            	<b>DevOps</b> es una <b>Cultura de Confianza y Colaboración</b> en la cual la gente usa las <b>Herramientas</b> adecuadas para la <b>automatización</b> y así poder garantizar una <b>Entrega Continua</b>.
+			            	<ul>
+			            	<li class="fragment"><b>DevOps</b> es una <b>Cultura de Confianza y Colaboración</b></li>
+			            	<li class="fragment">en la cual la gente usa las <b>Herramientas</b> adecuadas</li>
+			            	<li class="fragment">para la <b>automatización</b></li>
+			            	<li class="fragment">y así poder garantizar una <b>Entrega Continua</b>.</li>
+			            	</ul>
 			            </blockquote>
 			        </section>
 
@@ -400,6 +406,24 @@ rm -rf "$STEAMROOT/"*
 			        </section>
 
 			        <section>
+			            <h3>Cultura y Aprendizaje</h3>
+			            <ul>
+			            	<li class="fragment">Consejos de DevOps a dos Empresas: una tuvo éxito y la otra quebró</li>
+			            	<li class="fragment">El éxito y la falla se correlacionan con el grado de 'Aprendizaje Organizacional'</li>
+			            	<li class="fragment">Las 7 dimensiones del Aprendizaje Organizacional</li>
+			            	<ul>
+			            		<li class="fragment">Aprendizaje Continuo</li>
+			            		<li class="fragment">Preguntas y Diálogos</li>
+			            		<li class="fragment">Aprendizaje en Equipo</li>
+			            		<li class="fragment">Enpoderamiento</li>
+			            		<li class="fragment">Sistemas Embebidos</li>
+			            		<li class="fragment">Conexión de Sistemas</li>
+			            		<li class="fragment">Liderazgo Estratégico</li>
+			            	</ul>
+			            </ul>
+			        </section>
+
+			        <section>
 			            <h3>Proyectos con prácticas de DevOps</h3>
 			            <ul>
 			            	<li class="fragment">ACH</li>
@@ -416,7 +440,13 @@ rm -rf "$STEAMROOT/"*
 			            	<li class="fragment">Mejorar Capacidades Técnicas</li>
 			            	<li class="fragment">Comparar herramientas rápidamente</li>
 			            	<li class="fragment">Mejorar la selección de la herramienta ideal para el trabajo</li>
-			            	<li class="fragment">Automatizar absolutamente <b>TODO</b></li>
+			            	<li class="fragment">Automatizar lo más que se pueda (Preferiblemente <b>TODO</b>)</li>
+			            </ul>
+			        </section>
+
+			        <section>
+			            <h3>Trabajo por Hacer</h3>
+			            <ul>
 			            	<li class="fragment">Siempre pensar en Rollback, que también debe estar Automatizado</li>
 			            	<li class="fragment">Integración contínua</li>
 			            	<li class="fragment">Monitoreo de aplicaciones</li>
@@ -502,6 +532,9 @@ rm -rf "$STEAMROOT/"*
 			            <ul>
 			            	<li>Gene Kim, Patrick Debois, John Willis, Jez Humble, John Allspaw: <u><i>The DevOps Handbook: How to Create World-Class Agility, Reliability, and Security in Technology Organizations</i></u>(2016)</li>
 			            	<li>Jez Humble, David Farley: <u><i>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation </i></u>(2010)</li>
+			            	<li><a href="https://www.youtube.com/watch?v=eRMhP2L19Gw">Yuji Kiriki: <u><i>Continuous Delivery</i></u>(2014)</a></li>
+			            	<li><a href="https://www.youtube.com/watch?v=aoMfbgF2D_4">Martin Fowler: <u><i>Continuous Delivery</i></u>(2015)</a></li>
+			            	<li><a href="https://www.youtube.com/watch?v=P_sWGl7MzhU">Andrew Shafer: <u><i>There is no Talent Shortage</i></u>(2013)</a></li>
 			            	<li><a href="https://landing.google.com/sre/interview/ben-treynor.html">Site Reliability Engineering</a></li>
 			            	<li><a href="https://www.youtube.com/watch?v=yXI7r0_J29M">Site Reliability Engineering Video</a></li>
 			            </ul>
